@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'PartsPeon',
-      theme: ThemeData(canvasColor: Colors.transparent),
+      theme: ThemeData(canvasColor: Colors.white),
       home: Scaffold(body: DashBoard()),
     );
   }

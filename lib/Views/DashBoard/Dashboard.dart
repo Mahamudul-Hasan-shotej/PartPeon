@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:parts_peon/Model/Metarial/ColorConfig.dart';
 import 'package:parts_peon/Model/Metarial/Global.dart' as globals;
+import 'package:parts_peon/Views/DashBoard/LandingPage/Home.dart';
 
 class DashBoard extends StatefulWidget {
   @override
@@ -12,17 +13,19 @@ class _DashBoardState extends State<DashBoard> {
   final textList = ['Smart Lock', 'Camera', 'Location'];
   final iconList = <IconData>[
     Icons.home,
-    Icons.shopping_bag,
-    Icons.list_alt,
+    Icons.favorite,
+    Icons.shopping_cart,
     Icons.person,
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConfig.lightbagColour,
-      body: Container(
-        color: Colors.transparent,
-      ),
+      body: globals.bottomNavIndex == 0
+          ? Home()
+          : Container(
+              color: Colors.transparent,
+            ),
       floatingActionButton: Container(
         height: 60,
         width: 60,
@@ -50,7 +53,7 @@ class _DashBoardState extends State<DashBoard> {
                 children: [
                   Icon(
                     iconList[index],
-                    size: 26,
+                    size: 28,
                     color: color,
                   ),
                 ]);
