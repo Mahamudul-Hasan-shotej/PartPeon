@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:parts_peon/Model/Metarial/ColorConfig.dart';
+import 'package:parts_peon/Views/DashBoard/LandingPage/ImageSlider.dart';
 import 'package:parts_peon/Views/DashBoard/LandingPage/Maindrawer.dart';
 
 class Home extends StatefulWidget {
@@ -13,11 +14,11 @@ class _HomeState extends State<Home> {
     return Scaffold(
         backgroundColor: ColorConfig.lightbagColour,
         appBar: AppBar(
-          toolbarHeight: 60,
+          toolbarHeight: 70,
           iconTheme: IconThemeData(color: Colors.black),
           backgroundColor: Colors.white,
           title: Container(
-            height: 40,
+            height: 50,
             child: TextField(
               autofocus: false,
               onChanged: (value) {},
@@ -25,15 +26,16 @@ class _HomeState extends State<Home> {
               decoration: InputDecoration(
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(30.0),
-                      borderSide: BorderSide(color: Colors.black)),
+                      borderSide: BorderSide.none),
                   prefixIcon: Icon(
                     Icons.search,
                     color: Colors.black,
                   ),
+                  filled: true,
                   fillColor: ColorConfig.lightbagColour,
                   hintText: "What Do You Like to Buy",
                   contentPadding:
-                      EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                      EdgeInsets.only(left: 15, bottom: 5, top: 11, right: 15),
                   hintStyle: TextStyle(
                     color: Colors.black,
                   )),
@@ -43,13 +45,22 @@ class _HomeState extends State<Home> {
             IconButton(
               color: Colors.black,
               icon: Icon(Icons.more_vert),
+              iconSize: 30,
               onPressed: () {},
             )
           ],
         ),
         drawer: Maindrawer(),
-        body: Container(
-          height: 400,
+        body: Column(
+          children: [
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              height: 200,
+              child: ImageSlider(),
+            ),
+          ],
         ));
   }
 }
