@@ -3,6 +3,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:parts_peon/Model/Metarial/ColorConfig.dart';
 import 'package:parts_peon/Model/Metarial/Global.dart' as globals;
 import 'package:parts_peon/Views/DashBoard/LandingPage/Home.dart';
+import 'package:parts_peon/Views/ProfilePage/Profile.dart';
 
 class DashBoard extends StatefulWidget {
   @override
@@ -20,21 +21,28 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: ColorConfig.lightbagColour,
+      backgroundColor: globals.bottomNavIndex == 3
+          ? ColorConfig.themeColour
+          : ColorConfig.lightbagColour,
       body: globals.bottomNavIndex == 0
           ? Home()
-          : Container(
-              color: Colors.transparent,
-            ),
+          : globals.bottomNavIndex == 3
+              ? Profile()
+              : Container(
+                  color: Colors.transparent,
+                ),
       floatingActionButton: Container(
         height: 60,
         width: 60,
         child: FloatingActionButton(
           elevation: 3,
-          backgroundColor: ColorConfig.themeColour,
+          backgroundColor: globals.bottomNavIndex == 3
+              ? Colors.white
+              : ColorConfig.themeColour,
           child: Icon(
             Icons.shopping_bag,
-            color: Colors.white,
+            color:
+                globals.bottomNavIndex == 3 ? Color(0xffbdbdbd) : Colors.white,
             size: 24,
           ),
           onPressed: () {},
