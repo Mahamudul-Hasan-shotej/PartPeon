@@ -12,7 +12,7 @@ class Profile extends StatelessWidget {
       onSignup: (_) => Future.value(''),
       theme: LoginTheme(
         primaryColor: ColorConfig.themeColour,
-        textFieldStyle: TextStyle(color: Color(0xffbdbdbd)),
+        textFieldStyle: TextStyle(color: Colors.black),
       ),
       onSubmitAnimationCompleted: () {},
     );

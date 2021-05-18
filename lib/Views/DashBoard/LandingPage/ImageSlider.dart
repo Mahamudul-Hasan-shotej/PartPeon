@@ -6,14 +6,14 @@ class ImageSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       options: CarouselOptions(
-        height: 200.0,
+        height: 120.0,
         enlargeCenterPage: true,
         autoPlay: true,
-        aspectRatio: 16 / 9,
+        aspectRatio: 2.2 / 1,
         autoPlayCurve: Curves.fastOutSlowIn,
         enableInfiniteScroll: true,
         autoPlayAnimationDuration: Duration(microseconds: 800),
-        viewportFraction: 0.8,
+        viewportFraction: 0.9,
       ),
       items: [
         Container(
