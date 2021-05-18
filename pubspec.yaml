@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  multilevel_drawer: ^1.0.3
+
   
   flutter:
     sdk: flutter
