@@ -13,6 +13,7 @@ class Profile extends StatelessWidget {
       theme: LoginTheme(
         primaryColor: ColorConfig.themeColour,
         textFieldStyle: TextStyle(color: Colors.black),
+        titleStyle: TextStyle(fontFamily: 'SecularOne'),
       ),
       onSubmitAnimationCompleted: () {},
     );

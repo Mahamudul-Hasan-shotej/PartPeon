@@ -14,20 +14,21 @@ class Maindrawer extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.account_circle,
-              size: 120,
-              color: Colors.white54,
+            CircleAvatar(
+              backgroundImage: AssetImage('assets/Images/profilePic.jpg'),
+              radius: 50,
             ),
             SizedBox(
               height: 10,
             ),
             Text(
-              'MD.Mahamudul Hasan',
+              'Shotej Hasan',
               style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+                fontSize: 15,
+                color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontFamily: 'SecularOne',
+              ),
             )
           ],
         ),
@@ -42,7 +43,12 @@ class Maindrawer extends StatelessWidget {
             onClick: () {},
             subMenuItems: [
               MLSubmenu(
-                  submenuContent: Text('Option 1'),
+                  submenuContent: Center(
+                    child: Text(
+                      'Option 1',
+                      style: TextStyle(fontFamily: 'SecularOne'),
+                    ),
+                  ),
                   onClick: () {
                     Navigator.pop(context);
                   })
@@ -53,9 +59,24 @@ class Maindrawer extends StatelessWidget {
             trailing: Icon(Icons.arrow_right),
             onClick: () {},
             subMenuItems: [
-              MLSubmenu(submenuContent: Text('Option 1'), onClick: () {}),
-              MLSubmenu(submenuContent: Text('Option 2'), onClick: () {}),
-              MLSubmenu(submenuContent: Text('Option 3'), onClick: () {}),
+              MLSubmenu(
+                  submenuContent: Center(
+                    child: Text('Option 1',
+                        style: TextStyle(fontFamily: 'SecularOne')),
+                  ),
+                  onClick: () {}),
+              MLSubmenu(
+                  submenuContent: Center(
+                    child: Text('Option 2',
+                        style: TextStyle(fontFamily: 'SecularOne')),
+                  ),
+                  onClick: () {}),
+              MLSubmenu(
+                  submenuContent: Center(
+                    child: Text('Option 3',
+                        style: TextStyle(fontFamily: 'SecularOne')),
+                  ),
+                  onClick: () {}),
             ]),
         MLMenuItem(
           content: Text('Exit'),
