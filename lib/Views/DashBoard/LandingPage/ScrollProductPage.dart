@@ -5,7 +5,20 @@ class ScrollProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 180,
-      margin: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      width: double.infinity,
+      margin: EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Engine Collections',
+            style: TextStyle(
+              fontFamily: 'SecularOne',
+              fontSize: 18,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
