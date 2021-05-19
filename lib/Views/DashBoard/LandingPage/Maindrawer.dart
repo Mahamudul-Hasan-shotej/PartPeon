@@ -37,7 +37,10 @@ class Maindrawer extends StatelessWidget {
       divisionColor: ColorConfig.themeColour,
       children: [
         MLMenuItem(
-            content: Text('Person'),
+            content: Text(
+              'Person',
+              style: TextStyle(fontFamily: 'SecularOne'),
+            ),
             leading: Icon(Icons.person),
             trailing: Icon(Icons.arrow_right),
             onClick: () {},
@@ -54,7 +57,10 @@ class Maindrawer extends StatelessWidget {
                   })
             ]),
         MLMenuItem(
-            content: Text('Notification'),
+            content: Text(
+              'Notification',
+              style: TextStyle(fontFamily: 'SecularOne'),
+            ),
             leading: Icon(Icons.notifications),
             trailing: Icon(Icons.arrow_right),
             onClick: () {},
@@ -79,7 +85,10 @@ class Maindrawer extends StatelessWidget {
                   onClick: () {}),
             ]),
         MLMenuItem(
-          content: Text('Exit'),
+          content: Text(
+            'Exit',
+            style: TextStyle(fontFamily: 'SecularOne'),
+          ),
           leading: Icon(Icons.exit_to_app),
           onClick: () {
             Navigator.pop(context);

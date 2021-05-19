@@ -11,7 +11,7 @@ class DashBoard extends StatefulWidget {
 }
 
 class _DashBoardState extends State<DashBoard> {
-  final textList = ['Smart Lock', 'Camera', 'Location'];
+  final textList = ['Home', 'Wishlist', 'Cart', 'Profile'];
   final iconList = <IconData>[
     Icons.home,
     Icons.favorite,
@@ -64,6 +64,11 @@ class _DashBoardState extends State<DashBoard> {
                     size: 28,
                     color: color,
                   ),
+                  Text(
+                    textList[index],
+                    style: TextStyle(
+                        fontFamily: 'SecularOne', fontSize: 12, color: color),
+                  )
                 ]);
           },
           backgroundColor: Colors.white,
