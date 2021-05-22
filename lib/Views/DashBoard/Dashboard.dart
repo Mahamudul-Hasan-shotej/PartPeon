@@ -21,6 +21,7 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor:
           globals.bottomNavIndex == 3 ? ColorConfig.themeColour : Colors.white,
       body: globals.bottomNavIndex == 0

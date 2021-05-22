@@ -38,7 +38,7 @@ class Maindrawer extends StatelessWidget {
       children: [
         MLMenuItem(
             content: Text(
-              'Person',
+              'Spare Parts',
               style: TextStyle(fontFamily: 'SecularOne'),
             ),
             leading: Icon(Icons.person),

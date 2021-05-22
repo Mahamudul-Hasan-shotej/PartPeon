@@ -55,7 +55,9 @@ flutter:
     - assets/Images/image1.jpg
     - assets/Images/image2.jpg
     - assets/Images/image3.jpg 
-    - assets/Images/profilePic.jpg 
+    - assets/Images/profilePic.jpg  
+    - assets/Images/spareParts.jpg
+
 
   fonts:
     - family: SecularOne
