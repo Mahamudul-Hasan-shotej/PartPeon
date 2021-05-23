@@ -11,12 +11,16 @@ class ScrollProductPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            'Engine Collections',
-            style: TextStyle(
-              fontFamily: 'SecularOne',
-              fontSize: 18,
-            ),
+          Row(
+            children: [
+              Text(
+                'Engine Collections',
+                style: TextStyle(
+                  fontFamily: 'SecularOne',
+                  fontSize: 18,
+                ),
+              ),
+            ],
           ),
           Expanded(
             child: SizedBox(
