@@ -8,4 +8,5 @@ class ColorConfig {
   static const Color bagColour = Color(0xFFEAFFEE);
   static const Color lightbagColour = Color(0xffDEEFDA);
   static const Color lightThemeColour = Color(0xff46AB2F);
+  static const Color priceColor = Color(0xffE2A452);
 }

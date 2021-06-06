@@ -20,6 +20,22 @@ class ScrollProductPage extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
+              SizedBox(
+                width: 75,
+              ),
+              Container(
+                height: 30,
+                width: 100,
+                child: Card(
+                  color: Colors.white,
+                  child: Center(
+                    child: Text(
+                      'Show More >>',
+                      style: TextStyle(fontSize: 12, fontFamily: 'SecularOne'),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
           Expanded(

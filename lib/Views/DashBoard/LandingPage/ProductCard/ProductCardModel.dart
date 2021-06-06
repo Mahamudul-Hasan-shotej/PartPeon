@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:parts_peon/Model/Metarial/ColorConfig.dart';
 
 class ProductCardModel extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class ProductCardModel extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 100,
+              height: 90,
               width: double.infinity,
               child: Image(
                 image: AssetImage('assets/Images/spareParts.jpg'),
@@ -30,10 +31,25 @@ class ProductCardModel extends StatelessWidget {
                     'SparePart',
                     style: TextStyle(fontFamily: 'SecularOne'),
                   ),
-                  Text(
-                    '5800 tk',
-                    style: TextStyle(
-                        fontFamily: 'SecularOne', color: Color(0xffE2A453)),
+                  Text.rich(
+                    TextSpan(
+                      children: <TextSpan>[
+                        new TextSpan(
+                          text: '6000 tk\n',
+                          style: new TextStyle(
+                            color: Colors.grey,
+                            decorationColor: Colors.black,
+                            decoration: TextDecoration.lineThrough,
+                            decorationStyle: TextDecorationStyle.solid,
+                          ),
+                        ),
+                        new TextSpan(
+                            text: '5800 tk',
+                            style: new TextStyle(
+                              color: ColorConfig.priceColor,
+                            )),
+                      ],
+                    ),
                   ),
                 ],
               ),

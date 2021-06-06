@@ -3,7 +3,7 @@ import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.da
 import 'package:parts_peon/Model/Metarial/ColorConfig.dart';
 import 'package:parts_peon/Model/Metarial/Global.dart' as globals;
 import 'package:parts_peon/Views/DashBoard/LandingPage/Home.dart';
-import 'package:parts_peon/Views/ProfilePage/Profile.dart';
+import 'package:parts_peon/Views/DashBoard/ProfilePage/Profile.dart';
 
 class DashBoard extends StatefulWidget {
   @override
