@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:multilevel_drawer/multilevel_drawer.dart';
+import 'package:parts_peon/DataModel/AllCatagoryModel.dart';
 import 'package:parts_peon/Model/Metarial/ColorConfig.dart';
+import 'package:parts_peon/Repo/Dashboard/allCatagory_Repo.dart';
 
 class Maindrawer extends StatelessWidget {
+  AllCatagoryModel allCatagory = AllCatagoryModel();
+  AllCatagoryRepo allCatagoryRepo = AllCatagoryRepo();
+
   @override
   Widget build(BuildContext context) {
     return MultiLevelDrawer(
