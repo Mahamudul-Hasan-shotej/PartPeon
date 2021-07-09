@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
                 ),
                 Container(
                   height: 140,
-                  child: ImageSlider(),
+                  child: Allslider(),
                 ),
                 SizedBox(
                   height: 10,

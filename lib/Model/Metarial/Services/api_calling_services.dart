@@ -22,21 +22,33 @@ class AllApiCallingServices {
     }
     return responseJson;
   }
-}
 
-dynamic _returnResponse(http.Response response) {
-  switch (response.statusCode) {
-    case 200:
-      // var responseJson = json.decode(response.body.toString());
-      return response;
-    case 400:
-      throw BadRequestException(response.body.toString());
-    case 401:
-    case 403:
-      throw UnauthorisedException(response.body.toString());
-    case 500:
-    default:
-      throw FetchDataException(
-          'Error occured while Communication with Server with StatusCode : ${response.statusCode}');
+  Future<dynamic> allSlider() async {
+    var responseJson;
+    try {
+      var url1 = Uri.parse("http://localhost:7071/api/get-carousel/");
+      final response = await http.get(url1);
+      responseJson = _returnResponse(response);
+    } on SocketException {
+      throw FetchDataException('No Internet connection');
+    }
+    return responseJson;
+  }
+
+  dynamic _returnResponse(http.Response response) {
+    switch (response.statusCode) {
+      case 200:
+        // var responseJson = json.decode(response.body.toString());
+        return response;
+      case 400:
+        throw BadRequestException(response.body.toString());
+      case 401:
+      case 403:
+        throw UnauthorisedException(response.body.toString());
+      case 500:
+      default:
+        throw FetchDataException(
+            'Error occured while Communication with Server with StatusCode : ${response.statusCode}');
+    }
   }
 }

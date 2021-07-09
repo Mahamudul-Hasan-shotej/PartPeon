@@ -1,7 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:parts_peon/DataModel/sliderModel.dart';
+import 'package:parts_peon/Repo/Dashboard/allSlider_Repo.dart';
 
-class ImageSlider extends StatelessWidget {
+class Allslider extends StatefulWidget {
+  SliderModel sliderModel = SliderModel();
+  Allslider allslider;
+
+  @override
+  _AllsliderState createState() => _AllsliderState();
+}
+
+class _AllsliderState extends State<Allslider> {
+  AllSliderModel allSliderModel = AllSliderModel();
+
+  @override
+  void initState() async {
+    var sliderModel = await allSliderModel.fetchAllSlider();
+    print(sliderModel);
+  }
+
   @override
   Widget build(BuildContext context) {
     return CarouselSlider(
